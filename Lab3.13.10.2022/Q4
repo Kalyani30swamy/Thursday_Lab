@@ -1,0 +1,22 @@
+/*Write a program to accpet the positive numbers  from user and display the sum of that numbers using loop.
+*/
+import java.util.*;		//import packages
+
+public class Q4_positiveno	//create class
+{
+	 public static void main(String[] ars)	//main method
+     {
+        int num,sum=0;		//initialize the variables
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter Numbers(negavtive numbers are not considered for sum):\n");//print numbers
+        // When a negative number is inputed the condition(num<0)become true and break statement is executed
+        while(true)
+        {
+           num=input.nextInt(); //Read number
+           if(num<0)
+           break;
+           sum +=num;          
+        }
+           System.out.println( "Sum is : " +sum); 	//print the sum of positive numbers
+      }
+}
