@@ -31,7 +31,7 @@ public class Q2_SOD extends Q2_reverseno 		//Extend the class Q2_reverse with th
 	{
 		int num,digit,sum=0;  					//Initialize  variables 
 		Scanner sc = new Scanner(System.in); 	//allows user to take input from console 
-		System.out.print("Enter the number: "); //print or take number from user 
+		System.out.print("Enter the number for sum of digits: "); //print or take number from user 
 		num = sc.nextInt();  					//to scan the next word of the input as an int
 		while(num>0)  
 		{ 
