@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+<script src="https://kit.fontawesome.com/43b69dc540.js" crossorigin="anonymous"></script>
+
+    <style>
+        .gfg {
+            margin: 0%;
+            position: relative;
+        }
+		.click {
+            position: absolute;
+            top: 200px;
+            left: 30px;
+        }
+		.click2 {
+            position: absolute;
+            top: 80px;
+            right: 10px;
+        }
+		.click3 {
+            position: absolute;
+            top: 580px;
+            left: 10px;
+        }
+		.zero-txt {
+            position: absolute;
+            top: 17px;
+            left: 50px;
+        }
+        .first-txt {
+            position: absolute;
+            top: 100px;
+            left: 10px;
+        }
+  
+        .second-txt {
+            position: absolute;
+            top: 150px;
+            left: 10px;
+        }
+		.third-txt {
+            position: absolute;
+            top: 850px;
+            left: 10px;
+        }
+		
+		.fourth-txt {
+            position: absolute;
+            top: 200px;
+            left: 10px;
+        }
+		.fifth-txt {
+            position: absolute;
+            top: 300px;
+            left: 10px;
+        }
+		.sixth-txt {
+            position: absolute;
+            top: 350px;
+            left: 10px;
+        }
+		.seven-txt {
+            position: absolute;
+            top: 400px;
+            left: 10px;
+        }
+		.eight-txt {
+            position: absolute;
+            top: 450px;
+            left: 10px;
+        }
+		.nine-txt {
+            position: absolute;
+            top: 500px;
+            left: 10px;
+        }
+		.ten-txt {
+            position: absolute;
+            top: 250px;
+            left: 10px;
+        }
+		.eleven-txt {
+            position: absolute;
+            top: 600px;
+            left: 10px;
+        }
+		.twelve-txt {
+            position: absolute;
+            top: 650px;
+            left: 10px;
+        }
+		.thirteen-txt {
+            position: absolute;
+            top: 700px;
+            left: 10px;
+        }
+		 body {
+            background: rgb(140, 214, 30);
+        }
+		[data-tab-info] {
+            display: none;
+        }
+          
+        .active[data-tab-info] {
+            display: block;
+        }
+          
+        .tab-content {
+            font-size: 20px;
+            font-family: sans-serif;
+            font-weight: bold;
+            color: rgb(82, 75, 75);
+        }
+          
+        .tabs {
+            font-size: 40px;
+            color: rgb(255, 255, 255);
+            display: flex;
+            margin: 0;
+        }
+          
+        .tabs span {
+            background: rgb(28, 145, 38);
+            padding: 10px;
+            border: 1px solid rgb(255, 255, 255);
+        }
+          
+        .tabs span:hover {
+            background: rgb(29, 185, 112);
+            cursor: pointer;
+            color: black;
+        }
+    </style>
+</head>
+  
+<body>
+	
+    <div class="gfg">
+        <img src="D:\yoga\yoga-benefits.jpg">
+		
+		<div class="tabs">
+        <span data-tab-value="#tab_1">Fees as per course</span>
+        <span data-tab-value="#tab_2">Location of training</span>
+        <span data-tab-value="#tab_3">Timing</span>
+    </div>
+  
+    <div class="tab-content">
+        <div class="tabs__tab active" id="tab_1" data-tab-info>
+            <p>INR 749-->Valid for 1 month</p>
+			<p>INR 1,499-->Valid for 3 months</p>
+			<p>INR 2,249-->Valid for 6 months
+</p>
+        </div>
+        <div class="tabs__tab" id="tab_2" data-tab-info>
+            <p>Akurdi</p>
+			<p>Baner</p>
+			<p>Sangvi</p>
+  
+        </div>
+        <div class="tabs__tab" id="tab_3" data-tab-info>
+            <p>9am-11am</p>
+			<p>11am-1pm</p>
+			<p>4pm-6pm</p>
+			<p>7pm-9pm</p>
+  
+        </div>
+    </div>
+    <script type="text/javascript">
+        const tabs = document.querySelectorAll('[data-tab-value]')
+        const tabInfos = document.querySelectorAll('[data-tab-info]')
+  
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = document
+                    .querySelector(tab.dataset.tabValue);
+  
+                tabInfos.forEach(tabInfo => {
+                    tabInfo.classList.remove('active')
+                })
+                target.classList.add('active');
+            })
+        })
+    </script>
+		<h1 class="zero-txt" style="color:green">
+		<i class="fa-solid fa-hands-praying"></i>
+			WELCOME TO SAI YOGA CENTRE
+		</h1>
+		
+        <h2 class="first-txt" >
+           Practice At Home With the World’s Top Yoga Teachers
+        </h2>
+          
+        <h3 class="second-txt">
+           Stream hundreds of expertly led yoga & meditation classes on any device.			
+        </h3>
+		<h3 class="third-txt" style="color:red">
+			Your free trial awaits. Cancel online anytime.
+		</h4>
+		
+		<h4 class="fourth-txt">
+			click here to know the importance of yoga......
+			
+		</h4>
+		<h3 class="fifth-txt">
+			[All scheduled classes]
+		</h3>
+		<h3 class="sixth-txt">
+			Join our total body fitness with guidance for medical conditions & weightloss focused yoga classes for beginners/intermediate level.
+		</h3>
+		<h3 class="seven-txt">
+			- Live & Interactive with trainer guidance & Q&A. 
+		</h3>
+		<h3 class="eight-txt">
+			- All sessions cover joint rotations, asanas, pranayama & meditation.
+		</h3>
+		<h3 class="nine-txt">
+			- Attend any session on any day as per your schedule.
+		</h3>
+		<button class="click3" onclick="window.location.href='file:///D:/yoga/aboutus.html';">About us</button>
+		<h3 class="eleven-txt">
+		<i class="fa-sharp fa-solid fa-phone-volume"></i>
+			9854678654
+		</h3>
+		<h3 class="twelve-txt">
+		<i class="fa-solid fa-envelope"></i>
+			Email:-saiyoga.30@gmail.com
+		</h3>
+		<h3 class="thirteen-txt">
+		 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30263.482946631975!2d73.90557971562498!3d18.531822599999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c3775039ab4b%3A0xf28f8cda2a28438f!2sSai%20Wellness%20Center!5e0!3m2!1sen!2sin!4v1668091034879!5m2!1sen!2sin" width="300" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			<i class="fa-solid fa-landmark"></i>
+			Main branch
+		</h3>
+		
+		<button class="click" onclick="window.location.href='https://www.piesfitnessyoga.com/whats-the-importance-of-yoga-in-our-life/#:~:text=Yoga%20is%20being%20intensively%20studied,mind%20and%20keeping%20yourself%20healthy.';">Click Here</button>
+		<button class="click2" onclick="window.location.href='file:///D:/demo1.html';">sign-up</button>
+	</div>	
+	
+</body>
+  
+</html>
