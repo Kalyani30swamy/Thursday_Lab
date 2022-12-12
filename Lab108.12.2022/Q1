@@ -1,0 +1,169 @@
+package com.book;
+
+import java.util.Scanner;
+
+public class Book 
+{
+	Scanner sc=new Scanner(System.in);
+	String bookID;
+	static String Title;
+	static String author;
+	String category;
+	float price;
+	
+	Book() throws User //constructor
+	{ 
+
+		System.out.println("Enter Book id :");
+		bookID=sc.next();
+		if(bookID.startsWith("B") && bookID.length()<=4) //condition for checking book id should start only with B and shoud be <=4
+		{		   }
+		else {
+			throw new User("InvalidBookException"); // user Exceptions are thrown if the codition is false
+		}		
+		System.out.println("enter the title of book ");
+		Title=sc.next();
+		System.out.println("enter the author name ");
+        author=sc.next();		
+		System.out.println("Enter Category of Book");
+		category=sc.next();
+	    if(category.matches("Science") || category.matches("Fiction") || category.matches("Technology") || category.matches("Other")) // condition for category
+	    { }
+	    else {
+	     throw new User("InvalidBookException");	 // user exception Throws
+	    }
+	    System.out.println("Enter Book Price :");
+	    price=sc.nextFloat();
+	    if(price>0) // Price should not be negative
+	    {}
+	    else {
+	    	throw new User("InvalidBookException"); // user exception Throws
+	    }
+	    
+	}
+	public void oldBook() //information of book 
+	{
+		System.out.println("The Book Id is :"+ bookID);
+		System.out.println("the title is :"+Title);
+		System.out.println("The Category of Book is : " +category);
+		System.out.println("The Price of book is : "+price);
+		System.out.println("the author name is :"+author);
+	}
+	
+	
+}
+
+package com.book;
+
+public class User extends Exception
+{
+	public User(String msg)
+	{
+		super(msg); 
+	}
+}
+package com.book;
+
+public class Book_store_class extends Book
+{
+	public Book_store_class() throws User {		
+	}
+    String w,Author,title;
+	public void addBook() throws User // new book information
+	{
+	do
+	{
+	System.out.println("do you want to add new book press y:");
+    w=sc.next();
+	System.out.println("Enter Book id :");
+	 bookiD=sc.next();
+	if(bookiD.startsWith("B") && bookiD.length()<=4) //condtion for book id name and length 
+	{		   }
+	else {
+		throw new User("InvalidBookException"); // user exception Throws
+	}		
+	System.out.println("enter the title of book ");
+	title=sc.next();
+	System.out.println("enter the author name ");
+    Author=sc.next();		
+	System.out.println("Enter Category of Book");
+    Category=sc.next();
+    if(Category.matches("Science") || Category.matches("Fiction") || Category.matches("Technology") || Category.matches("Other"))
+    {}
+    else {
+     throw new User("InvalidBookException"); // user exception Throws	 
+    }
+    System.out.println("Enter Book Price :");
+    Price=sc.nextFloat();
+    if(Price>0) // Price is not negative
+    {}
+    else {
+    	throw new User("InvalidBookException"); // user exception Throws
+    }
+	}
+	while(w=="y"); // condition to add more book
+	}
+	String bookiD,Category;
+	public void newBook() throws User //new book information
+	{
+		
+		System.out.println("The Book Id is :"+ bookiD);
+		System.out.println("the title is :"+title);
+		System.out.println("The Category of Book is : " +Category);
+		System.out.println("The Price of book is : "+Price);
+		System.out.println("the author name is :"+Author);
+	}
+	float Price;
+	public void searchByTitle() throws User
+	{
+		
+		 System.out.println("enter the title for search ");
+		 String tiTle=sc.next();
+		 if(tiTle.equals(Title)) // condition for search book by title 
+		 { 
+			 oldBook();
+		 }
+		 if(tiTle.equals(title)) // condition for search book by title
+		 { 
+			 newBook();
+		 }
+	}
+	public void searchByAuthor() throws User
+	{
+		 
+		 System.out.println("enter author name for search ");
+		 String auThor =sc.next();
+		 if(auThor.equals(Author)) // condition for search book by author
+		 {
+			 newBook();
+		 }
+		 if(auThor.equals(author)) // condition for search book by author
+		 {
+			 oldBook();
+		 }
+	}
+	public void displayAll() throws User
+	{
+		oldBook();
+		newBook();
+	}	
+}
+package com.book;
+import com.book.Book_store_class; // package import with Book_store class
+import com.book.User; // package import with User_define class
+public class Book_util 
+{
+
+	public static void main(String[] args) throws User
+	{
+		// TODO Auto-generated method stub
+		Book_store_class obj=new Book_store_class();
+		obj.addBook();		
+		obj.searchByTitle();
+		obj.searchByAuthor();	
+		System.out.println("***************************************\n");
+		System.out.println("information about all books");
+		obj.displayAll();
+	}
+
+}
